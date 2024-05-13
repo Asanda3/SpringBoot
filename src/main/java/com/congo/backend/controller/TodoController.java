@@ -22,7 +22,7 @@ public class TodoController {
     public void save(@RequestBody Todo todo){
         todoService.saveTodo(todo);
     }
-    @GetMapping("{/id}")
+    @GetMapping("/{id}")
     public void update(@PathVariable Long id){
         this.todoService.getTodoById(id);
     }
